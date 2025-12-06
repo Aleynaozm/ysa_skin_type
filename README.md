@@ -28,11 +28,12 @@ Kaggle'dan veri setini indirin:
 Google Colab'da `Untitled5.ipynb` dosyasını açın ve hücreleri sırayla çalıştırın:
 
 1. Kütüphaneleri yükle
-2. Veri setini indir
-3. Veri setini hazırla
-4. Modelleri oluştur
-5. Modeli eğit
-6. Modeli değerlendir
+2. Kaggle API ayarlarını yap
+3. Veri setini indir
+4. Veri setini hazırla
+5. Modelleri oluştur
+6. Modeli eğit
+7. Modeli değerlendir
 
 Eğitilen model `final_model_Baseline_CNN.h5` olarak kaydedilecektir.
 
@@ -43,7 +44,7 @@ Eğitilen modeli `models/` klasörüne kopyalayın:
 ```bash
 mkdir -p models
 # Colab'dan indirdiğiniz modeli buraya kopyalayın
-cp /content/final_model_Baseline_CNN.h5 models/
+cp /path/to/final_model_Baseline_CNN.h5 models/
 ```
 
 ## 🖥️ Web Arayüzünü Çalıştırma
@@ -58,6 +59,7 @@ Tarayıcınızda otomatik olarak açılacaktır (genellikle `http://localhost:85
 
 1. **Model Eğitimi (Colab):**
    - `Untitled5.ipynb` dosyasını Google Colab'da açın
+   - Kaggle API token'ınızı yükleyin (Cell 2)
    - Tüm hücreleri sırayla çalıştırın
    - Eğitilen modeli indirin
 
@@ -86,11 +88,29 @@ ysa_skin_type-main/
 - **MobileNetV2:** Fine-tuning ile optimize edilmiş
 - **ResNet50:** Deep residual network
 
+## 📝 Notebook İçeriği
+
+Notebook şu adımları içerir:
+- Kütüphane yükleme ve ortam hazırlama
+- Kaggle API kurulumu ve veri seti indirme
+- Veri seti hazırlama ve görselleştirme
+- 4 farklı model mimarisi oluşturma
+- Model eğitimi ve callback'ler
+- Model değerlendirme ve görselleştirme
+- Model kaydetme ve indirme
+- Tahmin fonksiyonu ve kullanım örnekleri
+
 ## ⚠️ Önemli Notlar
 
 - Bu uygulama **eğitim amaçlıdır** ve tıbbi tavsiye yerine geçmez
 - En iyi sonuçlar için net, iyi aydınlatılmış cilt fotoğrafları kullanın
 - Model eğitimi GPU kullanımı ile daha hızlı olacaktır
+- Colab'da GPU'yu Runtime > Change runtime type > GPU seçerek aktif edin
+
+## 🔗 Bağlantılar
+
+- [Kaggle Dataset](https://www.kaggle.com/datasets/shakyadissanayake/oily-dry-and-normal-skin-types-dataset)
+- [Colab Notebook](https://colab.research.google.com/github/Aleynaozm/ysa_skin_type/blob/main/Untitled5.ipynb)
 
 ## 📝 Lisans
 
