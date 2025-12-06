@@ -16,8 +16,6 @@ CLASS_NAMES = ['dry', 'normal', 'oily']
 
 MODEL_PATH = None
 possible_paths = [
-    'models/final_model_Best.h5',
-    'final_model_Best.h5',
     'models/final_model_Baseline_CNN.h5',
     'final_model_Baseline_CNN.h5',
     'best_model_Baseline_CNN.h5',
